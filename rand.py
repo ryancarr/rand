@@ -24,15 +24,16 @@ def main():
     quantity = getInt('How many random numbers do you want to generate? ')
 
     numbers = set()
-    count = 1
-
+    
     while len(numbers) < quantity:
         numbers.add(randint(minimum, maximum))
 
-    for number in numbers:
-        print(str.format('{0}) {1}', count, number))
-        count += 1
-    
+    numbers = list(numbers)
+    numbers.sort()
+
+    with open('rand_output.txt', 'w') as f:
+        for number in numbers:
+            f.write(str(number) + '\n')
 
 
 if __name__ == '__main__':
