@@ -1,5 +1,5 @@
 # rand
-Random number generator in Python
+Random number generator in Python 3.x
 
 ## Known Issues
 Very little error checking is implemented.
